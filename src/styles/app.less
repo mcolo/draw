@@ -1,0 +1,123 @@
+@import "variables";
+@import "imports";
+
+body {
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+		 v2.0 | 20110126
+		 License: none (public domain)
+	*/
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+}
+
+/*-------- sticky footer ---*/
+html, body, .page-wrap {height:100%;}
+.content-wrap {min-height:100%; height:auto !important; height:100%; margin:0 auto -30px;}
+.footer-wrap, .push { height:30px;}
+
+.page-wrap {
+	background-color:#fafafa;
+	font-family:helvetica, sans-serif;
+
+	.post-wrap {
+		margin:45px 0 0;
+		text-align:center;
+	}
+	
+	.header-wrap {
+		height:40px;
+		line-height:40px;
+		position:fixed;
+		width:100%;
+		top:0;
+		left:0;
+		background-color:#fafafa;
+		z-index:1000;
+	}
+
+	.footer-wrap {
+		line-height:30px;
+	}
+
+	.header-text,
+	.footer-text {
+		color:#ccc;
+		text-transform:uppercase;
+	}
+
+	.header-text {
+		font-size:13px;
+	}
+
+	.footer-text {
+		font-size:11px;
+	}
+
+}
+
+@media (min-width:768px) {
+	.header-wrap,
+	.footer-wrap {
+		text-align:center;
+	}
+}
+
+@media (max-width:767px) {
+	.header-wrap,
+	.footer-wrap {
+		padding-left:15px;
+	}
+
+	.header-wrap {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+		filter: alpha(opacity=90);
+		-moz-opacity: 0.9;
+		-khtml-opacity: 0.9;
+		opacity: 0.9;
+	}
+}
+
+@import "home";
+@import "img";

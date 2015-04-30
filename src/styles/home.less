@@ -1,0 +1,47 @@
+.post-wrap {
+	&:first-child {
+		margin:40px 0 50px 0;
+	}
+	.post-details {
+		font-size:12px;
+		color:#bbb;
+	}
+	.hires-link {
+		color:#A3CBEE;
+	}
+	.img-wrap {
+		.post-img:hover {
+			cursor:pointer;
+			opacity:.9;
+		}
+	}
+}
+
+@media (min-width:531px) {
+	.page-wrap {
+		.post-wrap {
+			.img-wrap {
+				margin:0 0 70px;
+			}
+			.post-img,
+			.post-details {
+				width:500px;
+				margin:0 auto;
+			}
+		}
+	}
+}
+
+@media (max-width:530px) {
+	.page-wrap {
+		.post-wrap {
+			.img-wrap {
+				margin:0 0 30px;
+			}
+			.post-img,
+			.post-details {
+				width:100%;
+			}
+		}
+	}
+}
