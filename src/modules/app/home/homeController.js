@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function homeController($scope, imgService, $state, $rootScope) {
+  function homeController($scope, imgService, $state, $rootScope, gaService, $location) {
   	$rootScope.pageHeader = 'MXMRCL';
   	$scope.loading = true;
     imgService.fetch().then(function(data) {
@@ -12,4 +12,6 @@ module.exports = /*@ngInject*/
 	$scope.goToImg = function(imgId) {
 		$state.go('img', {id:imgId});
 	};
+
+  gaService.pageview($location.absUrl);
 };
