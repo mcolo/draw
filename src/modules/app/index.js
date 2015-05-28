@@ -11,6 +11,7 @@ module.exports =
     //useful directives, filters, services shared across the app
     require('../common').name,
     //example app module:
+    require('./contact').name,
     require('./home').name,
     require('./img').name,
     //load extra app modules here, e.g.:
