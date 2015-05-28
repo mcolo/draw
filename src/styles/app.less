@@ -62,14 +62,12 @@ html, body, .page-wrap {height:100%;}
 	font-family:helvetica, sans-serif;
 
 	.post-wrap {
-		margin:45px 0 0;
-		text-align:center;
+		text-align: center;
 	}
-	
+
 	.header-wrap {
 		height:40px;
 		line-height:40px;
-		position:fixed;
 		width:100%;
 		top:0;
 		left:0;
@@ -81,23 +79,37 @@ html, body, .page-wrap {height:100%;}
 		line-height:30px;
 	}
 
-	.header-text,
-	.footer-text {
-		color:#ccc;
-		text-transform:uppercase;
-	}
-
-	.header-text {
-		font-size:13px;
-	}
-
 	.footer-text {
 		font-size:11px;
+	}
+
+	.footer-text,
+	.header-link {
+		color:#ccc;
+		text-transform:uppercase;
+		position: relative;
+	}
+
+	.header-link {
+		font-size:12px;
+		text-decoration:none;
+		outline:none;
+		cursor:pointer;
+		transition-property: color;
+		transition-duration: 1s;
+		padding:0 15px 0 0;
+		&:hover {
+			color:#eee;
+		}
 	}
 
 }
 
 @media (min-width:768px) {
+	.header-wrap.fixed {
+		position:fixed;
+		margin:0 0 45px;
+	}
 	.header-wrap,
 	.footer-wrap {
 		text-align:center;
@@ -105,11 +117,6 @@ html, body, .page-wrap {height:100%;}
 }
 
 @media (max-width:767px) {
-	.header-wrap,
-	.footer-wrap {
-		padding-left:15px;
-	}
-
 	.header-wrap {
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 		filter: alpha(opacity=90);

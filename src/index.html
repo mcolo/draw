@@ -10,8 +10,9 @@
   <body class="page-wrap">
 
     <div class="content-wrap container-fluid">
-      <header class="header-wrap">
-        <span class="header-text">{{pageHeader}}</span>
+      <header class="header-wrap" ng-class="state === 'home' ? 'fixed' : ''">
+        <a class="header-link pull-left" ui-sref="home">MXMRCL</a>
+        <a class="header-link pull-left" ui-sref="contact">CONTACT</a>
       </header>
 
       <div ui-view></div>
