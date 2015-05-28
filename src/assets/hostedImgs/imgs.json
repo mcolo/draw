@@ -1,57 +1,57 @@
 {
   "images" : [
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/octopus_rgwflh.jpg",
+      "code": "octopus_rgwflh",
       "title": "EIGHT",
       "id": 1
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/stroll_drn0qo.jpg",
+      "code": "stroll_drn0qo",
       "title": "STROLL",
       "id": 2
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/lay_hzyzdj.jpg",
+      "code": "lay_hzyzdj",
       "title": "LAY",
       "id": 3
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/chop_mfafbg.jpg",
+      "code": "chop_mfafbg",
       "title": "CHOP",
       "id": 4
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/bask_dxygt7.jpg",
+      "code": "bask_dxygt7",
       "title": "BASK",
       "id": 5
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/drank_qowyip.jpg",
+      "code": "drank_qowyip",
       "title": "DRANK",
       "id": 6
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/FOLLOW_ecdjnd.jpg",
+      "code": "FOLLOW_ecdjnd",
       "title": "FOLLOW",
       "id": 7
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/EYE_mszc7n.jpg",
+      "code": "EYE_mszc7n",
       "title": "EYE",
       "id": 8
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/EMPIRE_ueiudq.jpg",
+      "code": "EMPIRE_ueiudq",
       "title": "EMPIRE",
       "id": 9
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/BREATHE_qatq86.jpg",
+      "code": "BREATHE_qatq86",
       "title": "BREATHE",
       "id": 10
     },
     {
-      "src": "http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_1100,c_scale,q_80/WAGE_qiiodq.jpg",
+      "code": "WAGE_qiiodq",
       "title": "SLAVE TO THE WAGE",
       "id": 11
     }

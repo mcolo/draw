@@ -8,7 +8,7 @@ module.exports = /*@ngInject*/
             var deferred = $q.defer();
 
             $timeout(function() {
-                $http.get('/assets/hostedImgs/imgs.json').success(function(data) {
+                $http.get('/assets/hostedImgs/imgs.json', {cache:true}).success(function(data) {
                     deferred.resolve(data);
                 });
             }, 30);
