@@ -5,7 +5,7 @@ module.exports = /*@ngInject*/
 
     $scope.loading = true;
     $rootScope.state = $state.current.name;
-    var baseUrl = 'http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_550,c_scale,q_70/';
+    var baseUrl = 'http://res.cloudinary.com/mxmrcl/image/upload/f_auto,w_700,c_scale,q_80/';
     var format = '.jpg';
 
     imgService.fetch().then(function(data) {
