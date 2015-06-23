@@ -1,0 +1,101 @@
+.contact-form {
+    .textarea {
+        border: 1px solid #eee;
+        width: 100%;
+        display: block;
+        vertical-align: middle;
+        margin: 0 0 10px;
+        padding:0 0 0 10px;
+        outline:none;
+        background-color:#fff;
+        font-size:14px;
+        color:#333;
+        padding:10px;
+    }
+
+    .contact-item-wrap {
+        position:relative;
+        display:table;
+        border-collapse:separate;
+        margin:0 0 10px;
+
+        .contact-label,
+        .contact-item {
+            outline:none;
+            padding:0 10px;
+            border:1px solid #eee;
+            font-size:14px;
+            display:table-cell;
+        }
+
+        .contact-label {
+            .rounded-left-corners(4px);
+            background-color:#fafafa;
+            border-right:0;
+            color:#ccc;
+            width:1%;
+            min-width:70px;
+        }
+        .contact-item {
+            .rounded-right-corners(4px);
+            background-color:#fff;
+            height:50px;
+            width:100%;
+            color:#555;
+        }
+    }
+
+    ::-webkit-input-placeholder { color: #ccc; font-size:14px; }
+    :-moz-placeholder { color: #ccc; font-size:14px; } /* Firefox 18- */
+    ::-moz-placeholder { color: #ccc; font-size:14px; } /* Firefox 19+ */
+    :-ms-input-placeholder { color: #ccc; font-size:14px; }
+
+    .submit-button {
+        .rounded-corners(4px);
+        background-color:#F0AEAE;
+        height:50px;
+        text-align:center;
+        color:#fff;
+        font-size:16px;
+        display:block;
+        width:100%;
+        line-height:50px;
+        vertical-align:middle;
+        cursor:pointer;
+        position:relative;
+        border:none;
+
+        &:hover {
+            background-color:#E28B8B;
+            span {
+                right:10px;
+            }
+        }
+        &:active {
+            background-color:#D07B7B;
+        }
+        span {
+            transition-property:right;
+            transition-duration:200ms;
+            position:absolute;
+            right:20px;
+            top:12px;
+            font-size:25px;
+            vertical-align:middle;
+        }
+    }
+
+}
+
+@media (min-width:531px) {
+    .contact-form {
+        width:500px;
+        margin:0 auto;
+    }
+}
+
+@media (max-width:530px) {
+    .contact-form {
+        width:100%;
+    }
+}
