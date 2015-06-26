@@ -1,20 +1,20 @@
 <section class="post-wrap">
-    <form class="contact-form" ng-submit="submit(contactform)" name="contactform" novalidate>
+    <form class="contact-form" ng-submit="submit(contactform)" name="contactform" method="post" novalidate>
         <div class="contact-item-wrap">
             <span class="contact-label">NAME</span>
-            <input class="contact-item" type="text" ng-model="contact.name" required>
+            <input class="contact-item" type="text" ng-model="contact.name" name="name" required>
         </div>
         <div ng-messages="contactForm['contact.name'].$error" role="alert" ng-show="contactForm['contact.name'].$dirty">
             <div ng-message="required" class="error-message">WHATS YOUR NAME?</div>
         </div>
         <div class="contact-item-wrap">
             <span class="contact-label">EMAIL</span>
-            <input class="contact-item" type="email" ng-model="contact.email">
+            <input class="contact-item" type="email" name="email" ng-model="contact.email" required>
         </div>
         <div ng-messages="contactForm['contact.email'].$error" role="alert" ng-show="contactForm['contact.email'].$dirty">
             <div ng-message="required" class="error-message">WHATS YOUR EMAIL?</div>
         </div>
-        <textarea placeholder="MESSAGE" class="textarea" rows="8" ng-model="contact.message"></textarea>
+        <textarea placeholder="MESSAGE" class="textarea" rows="8" name="message" ng-model="contact.message" required></textarea>
         <div ng-messages="contactForm['contact.message'].$error" role="alert" ng-show="contactForm['contact.message'].$dirty">
             <div ng-message="required" class="error-message">WHATS YOUR MESSAGE?</div>
         </div>
