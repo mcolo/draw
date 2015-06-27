@@ -1,23 +1,59 @@
 <section class="post-wrap">
     <form class="contact-form" ng-submit="submit(contactform)" name="contactform" method="post" novalidate>
+
         <div class="contact-item-wrap">
             <span class="contact-label">NAME</span>
-            <input class="contact-item" type="text" ng-model="contact.name" name="name" required>
+            <input class="contact-item" type="text" ng-model="contact.name" name="name" ng-focus="nameFocused=true" ng-blur="nameFocused=false" required>
         </div>
-        <div ng-messages="contactForm['contact.name'].$error" role="alert" ng-show="contactForm['contact.name'].$dirty">
-            <div ng-message="required" class="error-message">WHATS YOUR NAME?</div>
+        
+        <div role="alert" ng-show="contactform.name.$dirty && contactform.name.$invalid && !nameFocused">
+            <div class="error-message">WHATS YOUR NAME?</div>
         </div>
+
         <div class="contact-item-wrap">
             <span class="contact-label">EMAIL</span>
-            <input class="contact-item" type="email" name="email" ng-model="contact.email" required>
+            <input class="contact-item" type="email" name="email" ng-model="contact.email" ng-focus="emailFocused=true" ng-blur="emailFocused=false" required>
         </div>
-        <div ng-messages="contactForm['contact.email'].$error" role="alert" ng-show="contactForm['contact.email'].$dirty">
-            <div ng-message="required" class="error-message">WHATS YOUR EMAIL?</div>
+        
+        <div role="alert" ng-show="contactform.email.$dirty && contactform.email.$invalid && !emailFocused">
+            <div class="error-message">INVALID EMAIL</div>
         </div>
-        <textarea placeholder="MESSAGE" class="textarea" rows="8" name="message" ng-model="contact.message" required></textarea>
-        <div ng-messages="contactForm['contact.message'].$error" role="alert" ng-show="contactForm['contact.message'].$dirty">
-            <div ng-message="required" class="error-message">WHATS YOUR MESSAGE?</div>
+        
+        <textarea placeholder="MESSAGE" class="textarea" rows="8" name="message" ng-model="contact.message" ng-focus="messageFocused=true" ng-blur="messageFocused=false" required></textarea>
+        
+        <div role="alert" ng-show="contactform.message.$dirty && contactform.message.$invalid && !messageFocused">
+            <div class="error-message">WHATS YOUR MESSAGE?</div>
         </div>
-        <button type="submit" class="submit-button">SEND <span class="fa fa-angle-right"></span></button>
+
+        <p>{{result.message}}</p>
+
+        <button type="submit" class="submit-button" 
+            ng-class="result.success ? 'sent' : ''" 
+            ng-disabled="contactform.$invalid">
+
+            <span ng-hide="contactform.$valid" class="submit-icons form-in-progress">
+                <span class="fa fa-square-o" ng-show="contactform.name.$invalid"></span>
+                <span class="fa fa-square" ng-show="contactform.name.$valid"></span>
+                <span class="fa fa-square-o" ng-show="contactform.email.$invalid"></span>
+                <span class="fa fa-square" ng-show="contactform.email.$valid"></span>
+                <span class="fa fa-square-o" ng-show="contactform.message.$invalid"></span>
+                <span class="fa fa-square" ng-show="contactform.message.$valid"></span>
+            </span>
+
+            <span ng-show="contactform.$valid && !result.success">
+                SEND
+                <span class="submit-icons ready-to-send">
+                    <span class="fa fa-angle-right"></span>
+                </span>
+            </span>
+
+            <span ng-show="result.success">
+                THANKS
+                <span class="submit-icons send-success">
+                    <span class="fa fa-check"></span>
+                </span>
+            </span>
+
+        </button>
     </form>
 </section>
